@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html>
+<!-- head -->
+<head>
+	<meta charset="utf-8">
+	<title> Mon index </title>
+
+	<!-- CSS -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+	<link rel="stylesheet" href="src/css/main.css">
+	<!-- CSS -->
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet"> 
+	<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+	<!-- Font -->
+
+	<!-- Meta SEO -->
+	<meta name="description" content="description du site... les mots clés c'est ici !">
+	<meta name="keywords" content="julien, juthomas, thomas">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+	<!-- Meta SEO -->
+</head>
+
+<!-- head -->
+
+
+<!-- body -->
+<body>
+	<!-- header -->
+
+	<div class="block">
+
+		<header class="header">
+			<a href="#" class="header-logo">Mon site</a>
+			<nav class="header-menu">
+				<a href="#">Accueil</a>
+				<a href="#">A propos</a>
+				<a href="#">Mes travaux</a>
+				<a href="#">Contact</a>
+			</nav>
+		</header>
+
+	</div>
+	<!-- header -->
+	
+
+	<!-- banner -->
+	<div class="block">
+
+		<div class="banner">
+
+			<img src="src/img/background.jpg" alt="Code sur un ordi" class="banner-image">
+			<div class="banner-content">
+				<h1 class="title is-1">Bienvenu sur mon site</h1>
+				<h2 class="subtitle">Decouvrez mon univers</h2>
+				<button class="button is-link" id="open_modal">Contactez moi !</button>
+			</div>
+		</div>
+
+	</div>    
+	<!-- banner -->
+	
+		<!-- Modal -->
+
+		<!-- Modale Contact -->
+			<div class="modal own-modal" id="contact_modal">
+				<div class="modal-background"></div>
+				<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">Modal title</p>
+					<button class="delete" aria-label="close" id="close_contact_modal"></button>
+				</header>
+				<section class="modal-card-body">
+					<p>Contenu de la modale</p>
+					<!-- Content ... -->
+				</section>
+				<footer class="modal-card-foot">
+					<button class="button is-link">Save changes</button>
+				</footer>
+				</div>
+		 	</div>
+
+		<!-- Modale Succes -->
+			<div class="modal own-modal" id="succes_modal">
+				<div class="modal-background"></div>
+				<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">Email envoyé !</p>
+					<!-- <button class="delete" aria-label="close" id="close_succes_modal"></button> -->
+				</header>
+				<section class="modal-card-body">
+					<p>Votre message a bien été envoyé</p>
+					<!-- Content ... -->
+				</section>
+				<footer class="modal-card-foot">
+					<button class="button is-link" id="close_succes_modal">OK !</button>
+				</footer>
+				</div>
+		 	</div>
+		<!-- Modale Erreur -->
+		<div class="modal own-modal" id="error_modal">
+				<div class="modal-background"></div>
+				<div class="modal-card">
+				<header class="modal-card-head">
+					<p class="modal-card-title">Echec d'envoi du mail</p>
+					<!-- <button class="delete" aria-label="close" id="close_error_modal"></button> -->
+				</header>
+				<section class="modal-card-body">
+					<p>Votre message n'a pas pu etre envoyé</p>
+					<!-- Content ... -->
+				</section>
+				<footer class="modal-card-foot">
+					<button class="button is-link" id="close_error_modal">RIP...</button>
+				</footer>
+				</div>
+		 	</div>
+
+		<!-- Modal -->
+
+	<!-- Section : a propos -->
+	<div class="block">
+			<h2 class="subtitle heading-site">A propos</h2>
+		<div class="container about">
+			<div class="columns">
+				<div class="column about-single-element">
+					<i class="fas fa-code icon"></i>
+					<p>
+							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+					</p>
+				</div>
+				<div class="column about-single-element">
+					<i class="fas fa-coffee icon"></i>
+					<p>
+							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+					</p>
+					</div>
+				<div class="column about-single-element">
+					<i class="fas fa-carrot icon"></i>
+					<p>
+							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>    
+
+	<!-- Section : a propos -->
+
+	<!-- Portfolio -->
+	<div class="block">
+		<h2 class="subtitle heading-site">Mon Portfolio</h2>
+		<div class="container">
+			<div class="tile is-ancestor">
+				<div class="tile is-vertical is-8">
+					<div class="tile">
+						<div class="tile is-parent is-vertical">
+						<article class="tile is-child notification has-custom-background-grey-2">
+							<p class="title">Vertical...</p>
+							<p class="subtitle">Top tile</p>
+						</article>
+						<article class="tile is-child notification has-custom-background-grey-5">
+							<p class="title">...tiles</p>
+							<p class="subtitle">Bottom tile</p>
+						</article>
+						</div>
+						<div class="tile is-parent">
+						<article class="tile is-child notification has-custom-background-grey-3">
+							<p class="title">Middle tile</p>
+							<p class="subtitle">With an image</p>
+							<figure class="image is-4by3">
+							<img src="src/img/background.jpg" alt="description de la photo">
+							</figure>
+						</article>
+						</div>
+					</div>
+					<div class="tile is-parent">
+						<article class="tile is-child notification has-custom-background-grey-1">
+						<p class="title">Wide tile</p>
+						<p class="subtitle">Aligned with the right tile</p>
+						<div class="content">
+							<!-- Content -->
+						</div>
+						</article>
+					</div>
+					</div>
+					<div class="tile is-parent">
+					<article class="tile is-child notification has-custom-background-grey-4">
+						<div class="content">
+						<p class="title">Tall tile</p>
+						<p class="subtitle">With even more content</p>
+						<div class="content">
+							<!-- Content -->
+						</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Portfolio -->
+
+
+	<!-- Contact -->
+	<div class="block">
+		
+		<footer class="footer">
+			<h2 class="heading-site">Contact</h2>
+				<div class="footer-contact-form">
+					<form>
+						<div class="field">
+							<label class="label">Nom</label>
+							<div class="control">
+								<input id="lastname" class="input" type="text" placeholder="Smith" name="lastname">
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Prenom</label>
+							<div class="control">
+								<input id="firstname" class="input" type="text" placeholder="Alex" name="firstname">
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Email</label>
+							<div class="control">
+								<input id="email" class="input" type="text" placeholder="AlexSmith@mail.com" name="email">
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Message</label>
+							<div class="control">
+								<textarea id="message" class="textarea" placeholder="" name="message"></textarea>
+							</div>
+						</div>
+						<button class="button is-link" id="send_email">Envoyer !</button>
+					</form>
+				</div>
+				<div class="footer-informations">
+					<ul>
+						<p>
+							<li>
+								<a href="#">
+									<i class="fas fa-envelope"></i>
+									contact@juthomas.fr
+								</a>
+							</li>
+						</p>
+						<p>
+							<li>
+								
+								<a href="https://github.com/juthomas" target="_blank">
+									
+									<i class="fab fa-github"></i>
+									juthomas
+								</a>
+							</li>
+						</p>
+						<li>
+								<a href="https://www.linkedin.com/in/julien-thomas-942b18162/" target="_blank">
+	
+									<i class="fab fa-linkedin"></i>
+									Julien THOMAS
+								</a>
+						</li>
+					</ul>
+				</div>
+			
+		</footer>
+	</div>
+
+	<!-- Contact -->
+
+	<!-- <h1 class="title">Titre de la page</h1> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="src/js/main.js"></script>
+</body>
+
+<!-- body -->
+
+</html> 

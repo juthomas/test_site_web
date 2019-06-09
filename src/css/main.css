@@ -1,0 +1,161 @@
+/* Global */
+.heading-site {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgba(56, 55, 55, 0.582);
+    position: fixed;
+    top: 0;
+    z-index: 997;
+}
+
+.header .header-logo {
+    color : #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    float: left;
+    margin-left: 30px;
+}
+
+.header .header-menu {
+    float: right;
+    margin-right: 30px;
+
+
+}
+
+.header .header-menu a {
+    margin-right: 15px;
+    color: #FFFFFF;
+}
+
+.header .header-menu a:hover {
+    color: #3498db;
+}
+
+/* Banner */
+
+.banner {
+    margin-top: -30px;
+}
+
+.banner .banner-image {
+    position: relative;
+}
+
+.banner .banner-content {
+
+
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+}
+
+.banner .banner-content h1,
+.banner .banner-content h2 {
+    color: #FFFFFF;
+}
+
+/* About */
+
+.about .about-single-element .icon {
+    font-size: 60px;
+    text-align: center;
+}
+
+.about .about-single-element {
+    text-align: center;
+}
+
+.about .about-single-element p {
+    text-align: left;
+    margin-top: 20px;
+}
+
+/* Tiles */
+
+.has-custom-background-grey-1 {
+    background-color: #c0c0c0;
+}
+
+.has-custom-background-grey-2 {
+    background-color: #bebebe;
+}
+
+.has-custom-background-grey-3 {
+    background-color: #888888;
+}
+
+.has-custom-background-grey-4 {
+    background-color: #b4b4b4;
+}
+
+.has-custom-background-grey-5 {
+    background-color: #9e9e9e;
+}
+
+/* Footer */
+
+.footer .footer-informations {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer .footer-informations ul {
+    padding: 0;
+}
+
+.footer .footer-informations ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+/* Modals */
+
+
+
+.own-modal {
+    padding-top: 120px;
+    /* z-index: 999; */
+    overflow: hidden;
+
+}
+
+/* html, body {
+    overflow: hidden;
+  } */
+
+
+
+/* Reponsive test */
+
+@media screen and (max-width: 700px) {
+    .banner .banner-content {
+        top: 10%;
+    }
+    .banner .banner-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header .header-menu {
+        display: none;
+      
+    }
+    .banner .banner-content h1 {
+        font-size: 30px;
+    }
+    .banner .banner-content h2,
+    .banner .banner-content button {
+        display: none;
+    }
+}
