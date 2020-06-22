@@ -3,12 +3,13 @@
 <!-- head -->
 <head>
 	<meta charset="utf-8">
-	<title> Mon index </title>
+	<title> juthomas </title>
 
 	<!-- CSS -->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
 	<link rel="stylesheet" href="src/css/main.css">
+	<link rel="stylesheet" href="src/css/caroussel.css">
 	<!-- CSS -->
 
 	<!-- Font -->
@@ -16,8 +17,54 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
 	<!-- Font -->
 
+
+	<!-- Scroll fix -->
+	<script>
+		//Ce script permet de scroller automatiquement vers un element tout en laissant une marge
+		//predefinie vers le haut
+		//dernier fix: si l'element se trouve en bas de la page le script ne scroll plus inutilement dans le vide
+		function myFunction(elementID) {
+		  var mybodysafary = document.body; // On get le body pour le trisomique SAFARY
+		  var mybody = document.documentElement; // On get le body dans le script
+		  var elmnt = document.getElementById(elementID);// On get l'elem dans le scrip
+		  elmnt.scrollIntoView(true);// On scroll j'usqu a l'elem
+		  
+			var decal = 100; //Modifie ici le nombre de decalage
+			var scrolltop_ = mybody.scrollTop; //valeur du scroll actuel en PX
+			var clientHeight_ = mybody.clientHeight; // taille de l'ecran en PX
+			var scrollHeight_ = mybody.scrollHeight; // taille totale de la page en PX
+			var percent_ = ((scrolltop_ + clientHeight_) / scrollHeight_) * 100; // pourcentage de chargement de la barre de scroll
+		
+			if (decal + scrolltop_+clientHeight_ >= scrollHeight_)// si on est sur le bas de la page, on ne scroll que le necessaire
+			{
+			   mybody.scrollTop -=  scrollHeight_ - (scrolltop_+ clientHeight_);// decalage pour les navigateurs normaux
+			   mybodysafary.scrollTop -=  scrollHeight_ - (scrolltop_+ clientHeight_);// decalage pour cet abruti de SAFARI
+			}
+			else// autres cas
+			{
+				mybody.scrollTop -= decal;// decalage pour les navigateurs normaux
+				mybodysafary.scrollTop -= decal;// decalage pour cet abruti de SAFARI
+			}
+		}
+	</script>
+	<!-- Scroll fix -->
+
+	<!-- Copy function -->
+	<script>
+    function outFunc() {
+		$(' .tooltiptext').css(
+    	{
+  		  'visibility': 'hidden'
+  		})
+      }
+	</script> 
+	<!-- Copy function -->
+
+
+
+
 	<!-- Meta SEO -->
-	<meta name="description" content="description du site... les mots clés c'est ici !">
+	<meta name="description" content="Portfolio de Julien THOMAS">
 	<meta name="keywords" content="julien, juthomas, thomas">
 
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
@@ -34,12 +81,13 @@
 	<div class="block">
 
 		<header class="header">
-			<a href="#" class="header-logo">Mon site</a>
+			<a href="#" class="header-logo">Juthomas</a>
 			<nav class="header-menu">
-				<a href="#">Accueil</a>
-				<a href="#">A propos</a>
-				<a href="#">Mes travaux</a>
-				<a href="#">Contact</a>
+				<a href="#" >Accueil</a>
+				<a onclick="myFunction('Apropos')">A propos</a>
+				<a onclick="myFunction('Mescompetences')">Mes compétences</a>
+				<a href="#Mesprojets">Mes projets</a>
+				<!-- <a href="#">Contact</a> -->
 			</nav>
 		</header>
 
@@ -54,9 +102,9 @@
 
 			<img src="src/img/background.jpg" alt="Code sur un ordi" class="banner-image">
 			<div class="banner-content">
-				<h1 class="title is-1">Bienvenu sur mon site</h1>
+				<h1 class="title is-1">Bienvenue sur mon site</h1>
 				<h2 class="subtitle">Decouvrez mon univers</h2>
-				<button class="button is-link" id="open_modal">Contactez moi !</button>
+				<!-- <button class="button is-link" id="open_modal">Contactez moi !</button> -->
 			</div>
 		</div>
 
@@ -121,26 +169,26 @@
 		<!-- Modal -->
 
 	<!-- Section : a propos -->
-	<div class="block">
-			<h2 class="subtitle heading-site">A propos</h2>
+	<div class="block" id="Apropos">
+			<h2 class="heading-site">A propos</h2>
 		<div class="container about">
 			<div class="columns">
 				<div class="column about-single-element">
-					<i class="fas fa-code icon"></i>
+					<i class="fas fa-address-card icon"></i>
 					<p>
-							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+						Je m’appelle Julien THOMAS, j’ai 22 ans et je suis actuellement auto-entrepreneur en informatique. Je me passionne dans la création d’applications et de jeux sous windows, linux, android et IOS. Enfin, je m'intéresse particulièrement aux projets liant création artistique et arts du numérique, c’est pourquoi j’aimerais développer mon expérience dans ce milieu.
 					</p>
 				</div>
 				<div class="column about-single-element">
-					<i class="fas fa-coffee icon"></i>
+					<i class="fas fa-graduation-cap icon"></i>
 					<p>
-							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+						Durant mes années d'étude d’une part, en classe préparatoire pour l’IPSA qui est une école d'ingénieur en aéronautique et espace puis, d’autre part, à l'école 42, où j’ai pu acquérir de nombreuses compétences. En effet je possède de nombreuses aptitudes notamment en informatique où je maîtrise différents langages de programmations; C, C++, C#, JS, Python, Dart, Lua, Shaders, Shell, Perl, Ruby. Aussi, pendant mes années á l'école 42, j’ai réalisé des projets visuels ayant pour thème les fractales, la création d’un programme permettant de visualiser des cartographies en 3D, et j’ai aussi créé un jeu vidéo en 3D en ayant comme contraintes d’utiliser les procédés de création de 1980. Entre temps, j’ai pu travaillé en tant que maquettiste/roboticien à Explore Studio qui est une société de production vidéos (publicités, court-métrages, oeuvres interactives...)
 					</p>
 					</div>
 				<div class="column about-single-element">
-					<i class="fas fa-carrot icon"></i>
+					<i class="fas fa-code icon"></i>
 					<p>
-							Couler dans cette lumière sauvage. Je décrivis la pétaudière qu'était la voiture d'une nappe de lumière. Primera la froideur de vos syllogismes avec la passion d'accumuler sont principalement en opposition avec le visage plein de sang. Impatient de savoir s'y prendre, si l'oppression continuait, je ne promets pas aux autres à leur insu ! Dédaignant le foncier, il faut aimer la terre. Empressons-nous d'ajouter que je partage avec toute l'attention que ce vin n'est pas petite et d'où le daim sortit en bondissant. Acquittez-les, et vous m'en fassiez une. Inculquons-lui l'amour du bien et du mal, vous en êtes sûre ? 
+						Pendant ma formation à l’ecole 42, j’ai eu la chance d'intégrer le laboratoire concept-car de Matrice qui m’a permis de travailler sur des projets comme la création de design génératif, création de maquettes, création d’applications mobiles, création de crypto-monnaie, création d’applications en réalité augmentée et création d'hologrammes. En parallèle j’ai aussi participé à la mise en place et la conception d’un projet artistique sous la direction de Eli Commins, directeur artistique et directeur du programme culturel de Matrice.
 					</p>
 				</div>
 
@@ -153,39 +201,64 @@
 
 	<!-- Section : a propos -->
 
-	<!-- Portfolio -->
-	<div class="block">
-		<h2 class="subtitle heading-site">Mon Portfolio</h2>
+	<!-- Section : mes competances -->
+	<div class="block" id="Mescompetences">
+		<h2 class="heading-site">Mes compétences</h2>
 		<div class="container">
 			<div class="tile is-ancestor">
 				<div class="tile is-vertical is-8">
 					<div class="tile">
 						<div class="tile is-parent is-vertical">
 						<article class="tile is-child notification has-custom-background-grey-2">
-							<p class="title">Vertical...</p>
-							<p class="subtitle">Top tile</p>
+							<!-- <p class="title">Techniques</p> -->
+							<h3 class="heading-site"> Techniques </h3>
+							<!-- <p class="subtitle">Top tile</p> -->
+							<div class="content">
+								<ul>
+									<li>Mécanique automobile</li>
+									<li>Design et usinage industriel</li>
+									<li>Électronique</li>
+									<li>Informatique</li>
+									<li>Maquetisme</li>
+									<li>Impression 3D</li>
+								  </ul>
+							</div>
 						</article>
-						<article class="tile is-child notification has-custom-background-grey-5">
-							<p class="title">...tiles</p>
-							<p class="subtitle">Bottom tile</p>
-						</article>
+
 						</div>
 						<div class="tile is-parent">
 						<article class="tile is-child notification has-custom-background-grey-3">
-							<p class="title">Middle tile</p>
-							<p class="subtitle">With an image</p>
-							<figure class="image is-4by3">
-							<img src="src/img/background.jpg" alt="description de la photo">
-							</figure>
+							<h3 class="heading-site">Logiciels</h3>
+							<!-- <p class="subtitle">With an image</p> -->
+
+							<div class="content">
+								<ul>
+									<li>Visual Studio</li>
+									<li>Unity</li>
+									<li>Gimp</li>
+									<li>Photoshop</li>
+									<li>SolidWorks</li>
+									<li>Fusion 360</li>
+									<li>OBS</li>
+									<li>Excel</li>
+								  </ul>
+							</div>
+							<!-- <figure class="image is-4by3"> -->
+							<!-- <img src="src/img/background.jpg" alt="description de la photo"> -->
+							<!-- </figure> -->
 						</article>
 						</div>
 					</div>
 					<div class="tile is-parent">
 						<article class="tile is-child notification has-custom-background-grey-1">
-						<p class="title">Wide tile</p>
-						<p class="subtitle">Aligned with the right tile</p>
+							<h3 class="heading-site">Extra-professionelles</h3>
+						<!-- <p class="subtitle">Aligned with the right tile</p> -->
 						<div class="content">
-							<!-- Content -->
+							<ul>
+								<li>Régates de voiliers</li>
+								<li>Modelisme</li>
+								<li>Musique (piano, violon)</li>
+							  </ul>
 						</div>
 						</article>
 					</div>
@@ -193,10 +266,26 @@
 					<div class="tile is-parent">
 					<article class="tile is-child notification has-custom-background-grey-4">
 						<div class="content">
-						<p class="title">Tall tile</p>
-						<p class="subtitle">With even more content</p>
+							<h3 class="heading-site">Languages informatique</h3>
+						<!-- <p class="subtitle">- C </br>- C++ </p> -->
 						<div class="content">
-							<!-- Content -->
+							<ul>
+								<li>C</li>
+								<li>C++</li>
+								<li>C#</li>
+								<li>Python</li>
+								<li>Ruby</li>
+								<li>Perl</li>
+								<li>Shell</li>
+								<li>Dart</li>
+								<li>Java Script</li>
+								<li>GLSL (Shaders)</li>
+							<!-- </ul>
+							<h4>Web</h4>
+							<ul> -->
+								<li>Html</li>
+								<li>Css</li>
+							</ul>  
 						</div>
 						</div>
 					</article>
@@ -207,48 +296,98 @@
 
 
 
-	<!-- Portfolio -->
+	<!-- Section : mes competances -->
+
+	<!-- Section : mes oeuvres -->
+
+	<div class="block" id="Mesprojets">
+		<h2 class="heading-site">Mes projets</h2>
+		<div class="container">
+			<div id="carousel" class="carousel">
+
+				<button class="button" id="prev"><i class="fas fa-angle-left icon"></i></button>
+				<button class="button" id="next"><i class="fas fa-angle-right icon"></i></button>
+		
+		
+			   <div class="selected" id="img1">
+					<p class="carroussel_banner">Phone traveler (Cellulaire)</p>
+
+				<!-- <img src="src/img/IMG_20200522_174835.jpg"> -->
+			  </div>
+		
+			  <div class="next" id="img2">
+					<p class="carroussel_banner">Hollogramme marine</p>
+
+				<!-- <img src="src/img/IMG_20200529_153814.jpg"> -->
+			  </div>
+		
+			  <div class="nextRightSecond" id="img3">
+					<p class="carroussel_banner">Interactiv model</p>
+
+				<!-- <img src="src/img/IMG_20200606_021512.jpg"> -->
+			  </div>
+		
+			  <div class="hideRight" id="img4">
+					<p class="carroussel_banner">Walking micro dog</p>
+
+				<!-- <img src="src/img/IMG_20200615_004358.jpg"> -->
+			  </div>
+
+			  <div class="hideRight" id="img5">
+				<p class="carroussel_banner">Takeoff rocket</p>
+
+			<!-- <img src="src/img/IMG_20200615_004358.jpg"> -->
+		 	 </div>
+
+			  <div class="hideRight" id="img6">
+					<p class="carroussel_banner">Concept-car app</p>
+					<!-- <p class="carroussel_bot_banner">Ft Timotek, Joan</p> -->
+				<!-- <img src="src/img/IMG_20200522_174835.jpg"> -->
+			  </div>
+		
+			  <div class="hideRight" id="img7">
+					<p class="carroussel_banner">IGN map viewer</p>
+
+				<!-- <img src="src/img/IMG_20200529_153814.jpg"> -->
+			  </div>
+		
+			  <div class="hideRight" id="img8">
+					<p class="carroussel_banner">Shooter game 3D</p>
+
+				<!-- <img src="src/img/IMG_20200606_021512.jpg"> -->
+			  </div>
+
+			  <div class="hideRight" id="img9">
+					<p class="carroussel_banner">Fractal viewer</p>
+
+				<!-- <img src="src/img/IMG_20200606_021512.jpg"> -->
+			  </div>
+			  <div class="hideRight" id="img10">
+				<p class="carroussel_banner">FPV Drone</p>
+
+			<!-- <img src="src/img/IMG_20200606_021512.jpg"> -->
+		  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Section : mes oeuvres -->
 
 
 	<!-- Contact -->
 	<div class="block">
 		
 		<footer class="footer">
-			<h2 class="heading-site">Contact</h2>
-				<div class="footer-contact-form">
-					<form>
-						<div class="field">
-							<label class="label">Nom</label>
-							<div class="control">
-								<input id="lastname" class="input" type="text" placeholder="Smith" name="lastname">
-							</div>
-						</div>
-						<div class="field">
-							<label class="label">Prenom</label>
-							<div class="control">
-								<input id="firstname" class="input" type="text" placeholder="Alex" name="firstname">
-							</div>
-						</div>
-						<div class="field">
-							<label class="label">Email</label>
-							<div class="control">
-								<input id="email" class="input" type="text" placeholder="AlexSmith@mail.com" name="email">
-							</div>
-						</div>
-						<div class="field">
-							<label class="label">Message</label>
-							<div class="control">
-								<textarea id="message" class="textarea" placeholder="" name="message"></textarea>
-							</div>
-						</div>
-						<button class="button is-link" id="send_email">Envoyer !</button>
-					</form>
-				</div>
+			<!-- <h2 class="heading-site">Contact</h2> -->
+
 				<div class="footer-informations">
 					<ul>
 						<p>
 							<li>
-								<a href="#">
+								<a  id="mail" onmouseout="outFunc()">
+									<span class="tooltiptext" id="myTooltip" >Copié dans le presse papier</span>
 									<i class="fas fa-envelope"></i>
 									contact@juthomas.fr
 								</a>
@@ -282,6 +421,8 @@
 	<!-- <h1 class="title">Titre de la page</h1> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="src/js/main.js"></script>
+    <script src="src/js/caroussel.js"></script>
+
 </body>
 
 <!-- body -->
